@@ -32,7 +32,7 @@ class Punq < Formula
     end
   end
   
-  version "v1.1.29"
+  version "1.1.29"
   license "MIT"
 
   def install

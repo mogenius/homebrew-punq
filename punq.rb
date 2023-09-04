@@ -4,62 +4,62 @@ class Punq < Formula
   
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.40/punq-v1.1.40-darwin-arm64.tar.gz"
-      sha256 "395a530b68334abff5af2e7f64cc19de36cc16b16d537ed9753ce058f7a4c40c"
+      url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.41/punq-v1.1.41-darwin-arm64.tar.gz"
+      sha256 "f7ec8784547501047300fee7664a0447f084502fcf80fcbe6cdd32fdcc073377"
     elsif Hardware::CPU.intel?
-      url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.40/punq-v1.1.40-darwin-amd64.tar.gz"
-      sha256 "a990822531c9e964eb3196e00ab40a35d1876c9b1bc0aeff30249c572453c647"
+      url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.41/punq-v1.1.41-darwin-amd64.tar.gz"
+      sha256 "6e29ed5d6a27a09f29e3bbdf8f18b2caced46ddd54370379674cea1a1ab6d88e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.40/punq-v1.1.40-linux-amd64.tar.gz"
-        sha256 "572c6af925abc3ea8fdc332e85f81b0a1e71d53281b86f1c7041bd93d461a95c"
+        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.41/punq-v1.1.41-linux-amd64.tar.gz"
+        sha256 "1b9bfc4a93c9a8aa55b002646bb16698fc32f2b7860ed5366e2d403179828ed0"
       else
-        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.40/punq-v1.1.40-linux-386.tar.gz"
-        sha256 "8be55a13d4f109d9b0efae77559c66056d6baf6ab3e7a85bef38f59fd77f8a93"
+        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.41/punq-v1.1.41-linux-386.tar.gz"
+        sha256 "87490620d6ba6d3a04f1addd330aef203c295069932e27d81a0e21b18754c9d4"
       end
     elif Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.40/punq-v1.1.40-linux-arm64.tar.gz"
-        sha256 "d7d2b5f0fc469680c7cfc61de66ec627cb83ed075bcb4a795d58155017d01ecb"
+        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.41/punq-v1.1.41-linux-arm64.tar.gz"
+        sha256 "fd75ee21a07c660f7c5f13188cc42e7c9165fa6ee223b6fa9d4d6da56d7c65ab"
       else
-        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.40/punq-v1.1.40-linux-arm.tar.gz"
-        sha256 "c85735a2b85e62c50dde64998e9dfff3ad663a77a3012a561c759f83ddf9c7b0"
+        url "https://github.com/mogenius/homebrew-punq/releases/download/v1.1.41/punq-v1.1.41-linux-arm.tar.gz"
+        sha256 "0e2d60db0fcd2dcad97f6b0ef97d53efd399a2a082d570600b5ad02416de6b22"
       end
     end
   end
   
-  version "1.1.40"
+  version "1.1.41"
   license "MIT"
 
   def install
   if OS.mac?
     if Hardware::CPU.arm?
       # Installation steps for macOS ARM64
-      bin.install "punq-v1.1.40-darwin-arm64" => "punq"
+      bin.install "punq-v1.1.41-darwin-arm64" => "punq"
     elsif Hardware::CPU.intel?
       # Installation steps for macOS AMD64
-      bin.install "punq-v1.1.40-darwin-amd64" => "punq"
+      bin.install "punq-v1.1.41-darwin-amd64" => "punq"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         # Installation steps for Linux AMD64
-        bin.install "punq-v1.1.40-linux-amd64" => "punq"
+        bin.install "punq-v1.1.41-linux-amd64" => "punq"
       else
         # Installation steps for Linux 386
-        bin.install "punq-v1.1.40-linux-386" => "punq"
+        bin.install "punq-v1.1.41-linux-386" => "punq"
       end
     elsif Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         # Installation steps for Linux ARM64
-        bin.install "punq-v1.1.40-linux-arm64" => "punq"
+        bin.install "punq-v1.1.41-linux-arm64" => "punq"
       else
         # Installation steps for Linux ARM
-        bin.install "punq-v1.1.40-linux-arm" => "punq"
+        bin.install "punq-v1.1.41-linux-arm" => "punq"
       end
     end
   end
